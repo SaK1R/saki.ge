@@ -52,10 +52,9 @@
         <div class="headerContent">
             <h1 class="logo m-0 p-0">{{ haderTitle }}</h1>
 
-            <!-- 👇 Add burger -->
+
             <button class="burger" (click)="toggleMenu()">&#9776;</button>
 
-            <!-- 👇 Toggle navigation -->
             <div class="navigation" role="navigation" [class.open]="isMenuOpen">
                 <ul class="nav-list p-0 m-0">
                     <li *ngFor="let link of headerNavigation" (click)="closeMenu()">
