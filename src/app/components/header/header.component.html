@@ -1,0 +1,71 @@
+<!-- <header class="header w-100">
+    <div class="container">
+        <div class="headerContent">
+            <h1 class="logo m-0 p-0">{{haderTitle}}</h1>
+            <div class="navigation" role="navigation">
+                <ul class="nav-list p-0 m-0">
+                    <li *ngFor="let link of headerNavigation">
+                        <a
+                          [routerLink]="link.url"
+                          routerLinkActive="active-link"
+                          [routerLinkActiveOptions]="{ exact: true }">
+                          {{ link.label }}
+                        </a>
+                      </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</header> -->
+
+<!-- <header class="header w-100">
+    <div class="container">
+      <div class="headerContent">
+        <h1 class="logo m-0 p-0">{{ haderTitle }}</h1>
+
+        <button class="burger d-sm-none" (click)="toggleMenu()" aria-label="Menu">
+          &#9776;
+        </button>
+  
+        <div class="navigation" role="navigation" [class.open]="isMenuOpen">
+          <ul class="nav-list p-0 m-0">
+            <li *ngFor="let link of headerNavigation" (click)="closeMenu()">
+              <a
+                [routerLink]="link.url"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+   -->
+
+
+<header class="header w-100">
+    <div class="container">
+        <div class="headerContent">
+            <h1 class="logo m-0 p-0">{{ haderTitle }}</h1>
+
+            <!-- 👇 Add burger -->
+            <button class="burger" (click)="toggleMenu()">&#9776;</button>
+
+            <!-- 👇 Toggle navigation -->
+            <div class="navigation" role="navigation" [class.open]="isMenuOpen">
+                <ul class="nav-list p-0 m-0">
+                    <li *ngFor="let link of headerNavigation" (click)="closeMenu()">
+                        <a [routerLink]="link.url" routerLinkActive="active-link"
+                            [routerLinkActiveOptions]="{ exact: true }">
+                            {{ link.label }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

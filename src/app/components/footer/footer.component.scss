@@ -1,0 +1,18 @@
+.footer {
+    .container {
+        .footerContent {
+            .author {
+                padding: 15px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: var(--footerTextColor);
+                align-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 40px;
+            }
+        }
+    }
+}

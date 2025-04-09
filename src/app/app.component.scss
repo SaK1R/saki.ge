@@ -1,0 +1,48 @@
+/* Default styles for the app component */
+:host {
+    display: block;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.page-content {
+    padding: 2rem;
+    min-height: 92vh;
+    background-color: var(--bgColor1);
+}
+
+@media (max-width: 576px) {
+    .page-content{
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+    }
+}
