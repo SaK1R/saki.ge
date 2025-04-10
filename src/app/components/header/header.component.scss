@@ -1,271 +1,128 @@
-// .header {
-
-//     width: 100%;
-//     background-color: var(--bgColor);
-
-//     .container {
-
-//         .headerContent {
-//             width: 100%;
-//             height: 100px;
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-//             flex-direction: row;
-//             // background-color: red;
-
-
-//             .logo {
-
-//                 height: 100%;
-
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-//                 color: var(--logoColor);
-//             }
-
-//             .navigation {
-//                 height: 100%;
-//                 width: 60%;
-//                 display: flex;
-//                 align-items: center;
-
-//                 .nav-list {
-
-//                     width: 100%;
-//                     height: 100%;
-//                     display: flex;
-//                     justify-content: flex-end;
-//                     list-style: none;
-//                     align-items: center;
-//                     flex-wrap: wrap;
-//                     flex-direction: row;
-//                     align-content: center;
-//                     gap: 30px;
-
-//                     li {
-//                         list-style: none;
-
-
-//                         a {
-//                             text-decoration: none;
-//                             color: var(--headerTextColor)
-//                         }
-
-//                         .active-link {
-//                             color: var(--activeLinkColor);
-//                         }
-//                     }
-
-//                 }
-//             }
-//         }
-//     }
-
-// }
-// .burger {
-//     font-size: 2rem;
-//     background: none;
-//     border: none;
-//     color: var(--logoColor);
-//     cursor: pointer;
-//     display: block; // By default, show on mobile
-  
-//     @media (min-width: 577px) {
-//       display: none; // Hide burger on larger screens
-//     }
-//   }
-
-
-// @media (max-width: 576px) {
-//     .header {
-//       .headerContent {
-//         position: relative;
-  
-//         .burger {
-//           display: block;
-//           font-size: 2rem;
-//           background: none;
-//           border: none;
-//           color: var(--logoColor);
-//           cursor: pointer;
-//           z-index: 110;
-//         }
-  
-//         .navigation {
-//           display: none !important; // 👈 ensure it's hidden by default
-//           position: absolute;
-//           top: 0;
-//           right: 0;
-//           left: 0;
-//           bottom: 0;
-//           width: 100vw !important;
-//           height: 100vh !important;
-//           background-color: var(--bgColor);
-//           border-top: 1px solid #ddd;
-//           flex-direction: column;
-//           align-items: flex-start;
-//           z-index: 1111;
-  
-//           &.open {
-//             display: flex !important; 
-//             // height: 100vh !important;
-//             // width: 100vw !important;
-//             // margin: 0 !important;// 👈 only show when toggled
-//           }
-  
-//           .nav-list {
-//             flex-direction: column;
-//             align-items: flex-start;
-//             gap: 1rem;
-//             width: 100%;
-  
-//             li {
-//               width: 100%;
-  
-//               a {
-//                 display: block;
-//                 width: 100%;
-//                 padding: 0.5rem 0;
-//                 color: var(--headerTextColor);
-  
-//                 &.active-link {
-//                   color: var(--activeLinkColor);
-//                   font-weight: bold;
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-  
-
-
-
-
 .header {
-    width: 100%;
-    background-color: var(--bgColor);
-  
-    .container {
-      .headerContent {
-        width: 100%;
-        height: 100px;
+  width: 100%;
+  background-color: var(--bgColor);
+
+  .container {
+    .headerContent {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        height: 100%;
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-  
-        .logo {
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: var(--logoColor);
-        }
-  
-        .navigation {
-          height: 100%;
-          width: 60%;
-          display: flex;
-          align-items: center;
-  
-          .nav-list {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
-            list-style: none;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-  
-            li {
-              list-style: none;
-  
-              a {
-                text-decoration: none;
-                color: var(--headerTextColor);
-              }
-  
-              .active-link {
-                color: var(--activeLinkColor);
-              }
-            }
-          }
-        }
+        color: var(--logoColor);
       }
-    }
-  }
-  
-  // Burger button styles (visible on mobile only)
-  .burger {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: var(--logoColor);
-    cursor: pointer;
-    display: none; // Hide burger by default
-  
-    @media (max-width: 576px) {
-      display: block; // Show on mobile screens (<= 576px)
-    }
-  }
-  
-  // Mobile navigation styles
-  @media (max-width: 576px) {
-    .header {
-      .headerContent {
-        position: relative;
-  
-        .burger {
-          display: block; // Ensure burger shows on mobile
-          font-size: 2rem;
-          background: none;
-          border: none;
-          color: var(--logoColor);
-          cursor: pointer;
-          z-index: 110; // Ensure it stays on top of other elements
-        }
-  
-        .navigation {
-          display: none; // Initially hide the navigation
-          position: absolute;
-          top: 100px; // Adjust based on header height
-          right: 0;
+
+      .navigation {
+        height: 100%;
+        width: 60%;
+        align-items: center;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+
+        .nav-list {
           width: 100%;
-          background-color: var(--bgColor);
-          border-top: 1px solid #ddd;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 1rem;
-          z-index: 100;
-  
-          &.open {
-            display: flex; // Display the menu when 'open' class is added
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          list-style: none;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 30px;
+
+          li {
+            list-style: none;
+
+            a {
+              text-decoration: none;
+              color: var(--headerTextColor);
+            }
+
+            .active-link {
+              color: var(--activeLinkColor);
+            }
           }
-  
-          .nav-list {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+// Burger button styles (visible on mobile only)
+.burger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--logoColor);
+  cursor: pointer;
+  display: none; // Hide burger by default
+
+  @media (max-width: 576px) {
+    display: block; // Show on mobile screens (<= 576px)
+  }
+}
+
+// Mobile navigation styles
+@media (max-width: 576px) {
+  .header {
+    .headerContent {
+      position: relative;
+      // background-color: aqua;
+
+      .navigation {
+        display: none;
+        position: fixed; // <-- better for fullscreen overlay
+        top: 100px; // adjust based on your header height
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 100px); // fills remaining screen
+        background-color: var(--bgColor);
+        z-index: 100;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 0rem 0rem 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+
+        &.open {
+          display: flex;
+          width: 100% !important;
+        }
+
+        .nav-list {
+          display: flex !important;
+          flex-direction: column;
+          justify-content: flex-start !important;
+          align-content: flex-end;
+
+          li {
             width: 100%;
-  
-            li {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            a {
+              display: block;
               width: 100%;
-  
-              a {
-                display: block;
-                width: 100%;
-                padding: 0.5rem 0;
-                color: var(--headerTextColor);
-  
-                &.active-link {
-                  color: var(--activeLinkColor);
-                  font-weight: bold;
-                }
+              padding: 0.75rem 1rem;
+              font-size: 1.1rem;
+              color: var(--headerTextColor);
+              text-decoration: none;
+              width: max-content;
+              padding: 0;
+
+              &.active-link {
+                color: var(--activeLinkColor);
+                font-weight: bold;
               }
             }
           }
@@ -273,4 +130,4 @@
       }
     }
   }
-  
+}

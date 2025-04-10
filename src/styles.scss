@@ -13,3 +13,9 @@
     --footerTextColor: #BC8CF2;
 }
 
+.no-scroll {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+  }
+  

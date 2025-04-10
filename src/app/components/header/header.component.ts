@@ -17,7 +17,7 @@ export class HeaderComponent {
   headerNavigation = [
     { label: 'Home', url: '/' },
     { label: 'About', url: '/about' },
-    { label: 'Projects', url: '/projects'},
+    { label: 'Projects', url: '/projects' },
     { label: 'Contact', url: '/contact' }
   ];
 
@@ -25,11 +25,16 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log('open')
+  
+    if (this.isMenuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
   }
   
   closeMenu() {
     this.isMenuOpen = false;
-    console.log('close')
+    document.body.classList.remove('no-scroll');
   }
 }
