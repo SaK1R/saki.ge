@@ -5,12 +5,15 @@
 }
 
 :root{
+
+    --bgColor: #fbfbfb;
     --bgColor1: #cccccc;
-    --bgColor: #31363F;
-    --logoColor: #BC8CF2;
-    --headerTextColor: #DFDFDE;
-    --activeLinkColor: #BC8CF2;
-    --footerTextColor: #BC8CF2;
+    
+    --logoColor: #d62d65;
+
+    --headerTextColor: #92c9cd;
+    --activeLinkColor: #d62d65;
+    --footerTextColor: #d62d65;
 }
 
 .no-scroll {

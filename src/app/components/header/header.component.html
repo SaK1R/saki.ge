@@ -1,8 +1,10 @@
 <header class="header w-100">
   <div class="container">
     <div class="headerContent">
-      <h1 class="logo m-0 p-0">{{ haderTitle }}</h1>
-
+      <div class="logo">
+        <img src="assets/Logo.png" class="logoImg m-0 p-0" alt="Logo Image" />
+      </div>
+      
 
       <button class="burger" (click)="toggleMenu()">
         {{ isMenuOpen ? '✖' : '☰' }}
