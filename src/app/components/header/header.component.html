@@ -13,12 +13,11 @@
       <div class="navigation" role="navigation" [class.open]="isMenuOpen">
         <ul class="nav-list p-0 m-0">
           <li *ngFor="let link of headerNavigation">
-            <a [routerLink]="link.url" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+            <a class="fontTest" [routerLink]="link.url" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
               (click)="closeMenu()">
               {{ link.label }}
             </a>
           </li>
-
         </ul>
       </div>
     </div>

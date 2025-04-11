@@ -1,24 +1,23 @@
 .header {
   width: 100%;
   background-color: var(--bgColor);
-  // background-color: brown;
+  position: fixed;
 
   .container {
-    // background-color: blueviolet;
+
     .headerContent {
+
       width: 100%;
-      height: 80px;
+      height: 8vh;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // background-color: aqua;
 
       .logo {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        // background-color: brown;
 
         .logoImg {
           height: 70%;
@@ -28,17 +27,14 @@
       .navigation {
         height: 100%;
         width: 80%;
-        top: 70px;
+        top: 59px;
 
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
         transition: transform 0.3s ease, opacity 0.3s ease;
-        // background-color: rgb(27, 52, 177);
-
 
         .nav-list {
-  
           display: flex;
           justify-content: flex-end;
           list-style: none;
@@ -46,7 +42,11 @@
           flex-wrap: wrap;
           gap: 40px;
           height: 100%;
-          // background-color: #2b2b2b;
+          flex-direction: row;
+
+          @media (max-width: 992px) {
+            gap: 25px;
+          }
 
           li {
             list-style: none;
@@ -54,7 +54,7 @@
             a {
               text-decoration: none;
               color: var(--headerTextColor);
-              font-size: 17px;
+              font-size: 15px;
               font-weight: bolder;
             }
 
@@ -80,36 +80,43 @@
   display: none;
 
   @media (max-width: 576px) {
-    display: block;  }
+    display: block;
+  }
 }
 
 
 // Mobile navigation styles
 @media (max-width: 576px) {
   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--bgColor);
+
     .headerContent {
       position: relative;
       flex-direction: row-reverse;
-      // background-color: aqua;
-      .logo{
+
+      .logo {
         height: 20%;
-        margin-right: 12px;
       }
 
       .navigation {
         display: none;
-        position: fixed; // <-- better for fullscreen overlay
-        top: 100px; // adjust based on your header height
+        position: fixed;
+        top: 8vh !important;
         left: 0;
         width: 100vw;
-        height: calc(100vh - 100px); // fills remaining screen
+        height: calc(100vh - 100px);
+        height: 92vh !important;
         background-color: var(--bgColor);
         z-index: 100;
         flex-direction: column;
         align-items: flex-start;
         padding: 1.5rem 0rem 0rem 12px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 
 
         &.open {
@@ -122,6 +129,7 @@
           flex-direction: column;
           justify-content: flex-start !important;
           align-content: flex-start;
+          gap: 10px;
 
           li {
             width: 100%;

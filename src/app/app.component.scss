@@ -33,16 +33,16 @@
     clear: both;
 }
 
-.page-content {
-    padding: 2rem;
-    min-height: 92vh;
-    background-color: var(--bgColor1);
-}
 
-@media (max-width: 576px) {
-    .page-content{
+
+.page-content {
+    padding: 2rem; //For Edit
+    padding-top: 10vh;
+    min-height: 97vh;
+    background-color: var(--bgColor1);
+    @media (max-width: 576px) {
+        margin-top: 8vh;
         padding: 0;
-        margin: 0;
         width: 100vw;
     }
 }
